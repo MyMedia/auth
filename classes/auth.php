@@ -295,7 +295,7 @@ class Auth
 
 		if ($driver_exists || $method_exists)
 		{
-			\Error::notice('Cannot add driver type, its name conflicts with another driver or method.');
+			\Errorhandler::notice('Cannot add driver type, its name conflicts with another driver or method.');
 			return false;
 		}
 
@@ -313,7 +313,7 @@ class Auth
 	{
 		if (in_array($type,array('login', 'group', 'acl')))
 		{
-			\Error::notice('Cannot remove driver type, included drivers login, group and acl cannot be removed.');
+			\Errorhandler::notice('Cannot remove driver type, included drivers login, group and acl cannot be removed.');
 			return false;
 		}
 
